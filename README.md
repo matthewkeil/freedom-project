@@ -3,7 +3,7 @@
   freedom;
   project;
 
-  decentralized/democratized socail interaction
+  decentralized/democratized organization and discussion platform
 
   As a group, we are a smart people that do amazing things. With that in mind,
 there has got to be a better way to do "this government thing." This project
