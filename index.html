@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" >
+    <title>freedom;project;</title>
+</head>
+<body>
+    <section class="hero-container">
+        <div class="hero-content">
+            <div class="hero">
+                <h1>Freedom <span id="verb" class="fade-in"></span> We</h1>
+            </div>
+        </div>
+    </section>
+    <script>
+        
+        const verbs = [
+            "is", 
+            "by", 
+            "through", 
+            "from",
+            "in",
+            "for",
+            "if"
+        ];
+
+        const element = document.getElementById('verb');
+        
+        const showForDuration = 2000;
+        let verbIndex = 0;
+        element.innerText = verbs[verbIndex];
+        
+        let fadeDuration = 300;
+        // element.style.transitionDuration = `${fadeDuration}ms` ;
+        
+        const setVerb = (index) => {
+
+            element.className.replace("fade-out", "fade-in");
+            
+            setTimeout(() => {
+                element.innerText = verbs[index];
+                element.className.replace("fade-in", "fade-out");
+            }, fadeDuration);
+        }
+
+        setInterval(() => {
+
+            if (verbIndex === (verbs.length - 1)) {
+                verbIndex = 0;
+            } else {
+                verbIndex++
+            };
+
+            setVerb(verbIndex);
+            
+        }, showForDuration);
+    </script>
+</body>
+</html>
